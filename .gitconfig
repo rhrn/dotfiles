@@ -1,0 +1,27 @@
+[user]
+  name = Nesterov Roman
+  email = nester@bk.ru
+[alias]
+  co = checkout
+  br = branch
+  st = status
+  cm = commit -m
+  cam = commit --amend
+  ds = diff --staged
+  fix = commit --fixup
+  squash = commit --squash
+  pr = pull --rebase
+  rc = rebase --continue
+  ri = rebase --interactive --autosquash
+  ra = rebase --abort
+  rs = rebase --skip
+  sub = submodule update --init
+  hi = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  show-files = show --pretty="format:" --name-only
+  lt = describe --abbrev=0 --tags
+[rerere]
+  enabled = 0
+[push]
+  default = simple
+[color]
+  ui = false
