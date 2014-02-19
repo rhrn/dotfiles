@@ -5,6 +5,9 @@ alias ll="ls -lah"
 alias eclipse="~/java/eclipse/eclipse"
 alias ubu="sudo apt-get update && sudo apt-get upgrade -y"
 
+# past on middle tap
+synclient TapButton3=3 TapButton2=2
+
 autoload -Uz promptinit
 #promptinit
 #prompt walters
