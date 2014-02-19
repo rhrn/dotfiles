@@ -24,4 +24,4 @@ function! Spaces()
   set expandtab
 endfunction
 
-execute Tabs()
+execute Spaces()
