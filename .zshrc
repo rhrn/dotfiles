@@ -17,11 +17,6 @@ bindkey -v
 
 export EDITOR=vim
 export GIT_EDITOR=vim 
-export PATH=${PATH}:~/android-sdk-linux/tools
-export PATH=${PATH}:~/android-sdk-linux/platform-tools
-export PATH=${PATH}:~/node/watchers/bin/
-export ANDROID_SDK=~/android-sdk-linux 
-export ANDROID_HOME=~/android-sdk-linux 
 export ECLIPSE_HOME=~/java/eclipse
 export LANG=en_US.UTF-8
 export LANGUAGE=en
