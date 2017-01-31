@@ -26,7 +26,7 @@ endfunction
 
 "autocmd FileType php setlocal noeol binary fileformat=dos
 
-highlight Search ctermfg=Grey ctermbg=NONE ctermbgterm=NONE
+highlight Search ctermfg=Grey ctermbg=NONE
 highlight NonText ctermfg=16
 highlight SpecialKey ctermfg=16
 highlight Pmenu ctermfg=Gray ctermbg=DarkGray
