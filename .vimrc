@@ -1,12 +1,12 @@
 set encoding=utf-8
 set fileencoding=utf-8
 set termencoding=utf-8
+set dir=/tmp
 syntax off
 filetype plugin off
 set autoindent
 set smartindent
 set nocindent
-let g:debuggerPort = 9005
 set clipboard=unnamed
 set hidden
 
@@ -26,11 +26,12 @@ endfunction
 
 "autocmd FileType php setlocal noeol binary fileformat=dos
 
-highlight Search ctermfg=Grey ctermbg=NONE cterm=NONE
+highlight Search ctermfg=Grey ctermbg=NONE ctermbgterm=NONE
 highlight NonText ctermfg=16
 highlight SpecialKey ctermfg=16
-set hlsearch
+highlight Pmenu ctermfg=Gray ctermbg=DarkGray
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set list
 set noeb vb t_vb=
 
 "colorscheme FreshCut
