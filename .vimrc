@@ -2,13 +2,9 @@ set encoding=utf-8
 set fileencoding=utf-8
 set termencoding=utf-8
 set dir=/tmp
-syntax off
 filetype plugin off
-set autoindent
-set smartindent
-set nocindent
+
 set clipboard=unnamed
-set hidden
 
 function! Spaces()
   set softtabstop=2
@@ -37,3 +33,41 @@ set noeb vb t_vb=
 "colorscheme FreshCut
 
 execute Spaces()
+
+call plug#begin('~/.vim/plugged')
+Plug 'editorconfig/editorconfig-vim'
+"Plug 'crusoexia/vim-monokai'
+"Plug 'dracula/vim', { 'as': 'dracula' }
+"Plug 'jacoborus/tender.vim'
+call plug#end()
+
+" Persistent undo
+set undofile
+set undodir=$HOME/.vim/undo
+
+set undolevels=1000
+set undoreload=10000
+
+" tender
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+" Theme
+"syntax enable
+syntax off
+"colorscheme tender
+"colorscheme monokai
+"colorscheme dracula
+"
+set t_Co=256 
+
+set autoindent
+set smartindent
+"set cindent
+"set indentexpr=
+filetype indent off
+
+set path+=**
+set wildmenu
+set hidden

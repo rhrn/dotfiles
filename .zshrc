@@ -6,8 +6,10 @@ alias eclipse="~/java/eclipse/eclipse"
 alias ap="absolute_path"
 alias vim-git-u="vim `git ls-files -m`"
 alias e="vim"
+alias ctags="`brew --prefix`/bin/ctags"
 
 bindkey -v
+bindkey '^R' history-incremental-search-backward
 
 export EDITOR=vim
 export GIT_EDITOR=vim 
@@ -32,6 +34,9 @@ compinit
 #source ~/.zshrc_local
 
 setopt NO_BEEP
+setopt HIST_IGNORE_DUPS
+unsetopt inc_append_history
+unsetopt share_history
 
 ###-tns-completion-start-###
 if [ -f /Users/rhrn/.tnsrc ]; then 
@@ -95,3 +100,12 @@ elif type compctl &>/dev/null; then
   compctl -K _npm_completion npm
 fi
 ###-end-npm-completion-###
+
+if [ $commands[kubectl] ]; then
+  source <(kubectl completion zsh)
+fi
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/vault vault
+
+export PATH=~/.npm-global/bin:$PATH
