@@ -1,10 +1,9 @@
-set encoding=utf-8
 set fileencoding=utf-8
 set termencoding=utf-8
 set dir=/tmp
 filetype plugin off
 
-set clipboard=unnamed
+"set clipboard=unnamed
 
 function! Spaces()
   set softtabstop=2
@@ -20,25 +19,29 @@ function! Tabs()
   set noexpandtab
 endfunction
 
+execute Spaces()
+
 "autocmd FileType php setlocal noeol binary fileformat=dos
 
 highlight Search ctermfg=Grey ctermbg=NONE
 highlight NonText ctermfg=16
 highlight SpecialKey ctermfg=16
 highlight Pmenu ctermfg=Gray ctermbg=DarkGray
+set backspace=indent,eol,start
 set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set list
 set noeb vb t_vb=
 
 "colorscheme FreshCut
 
-execute Spaces()
-
 call plug#begin('~/.vim/plugged')
+Plug 'dense-analysis/ale'
 Plug 'editorconfig/editorconfig-vim'
-"Plug 'crusoexia/vim-monokai'
-"Plug 'dracula/vim', { 'as': 'dracula' }
-"Plug 'jacoborus/tender.vim'
+Plug 'crusoexia/vim-monokai'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'jacoborus/tender.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " Persistent undo
@@ -48,18 +51,13 @@ set undodir=$HOME/.vim/undo
 set undolevels=1000
 set undoreload=10000
 
-" tender
-if (has("termguicolors"))
-  set termguicolors
-endif
-
-" Theme
+ "Theme
 "syntax enable
 syntax off
-"colorscheme tender
+colorscheme tender
 "colorscheme monokai
 "colorscheme dracula
-"
+
 set t_Co=256 
 
 set autoindent
@@ -71,3 +69,10 @@ filetype indent off
 set path+=**
 set wildmenu
 set hidden
+
+nnoremap <c-p> :GFiles<cr>
+
+"let g:ale_fixers = { 'javascript': ['eslint'] }
+"let g:ale_fix_on_save = 1
+"
+set suffixesadd=.js,.vue,.scss,.svelte,.ts

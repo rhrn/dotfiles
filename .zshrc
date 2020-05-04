@@ -11,6 +11,7 @@ alias ctags="`brew --prefix`/bin/ctags"
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 
+export LC_ALL=en_US.UTF-8
 export EDITOR=vim
 export GIT_EDITOR=vim 
 export PATH=${PATH}:~/bin
