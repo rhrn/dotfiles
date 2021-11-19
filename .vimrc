@@ -5,6 +5,9 @@ filetype plugin off
 
 "set clipboard=unnamed
 
+"set tabstop=2 shiftwidth=2 expandtab
+":retab
+
 function! Spaces()
   set softtabstop=2
   set shiftwidth=2
@@ -42,6 +45,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'jacoborus/tender.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+"Plug 'evanleck/vim-svelte', {'branch': 'main'}
 call plug#end()
 
 " Persistent undo
@@ -52,8 +56,8 @@ set undolevels=1000
 set undoreload=10000
 
  "Theme
-"syntax enable
 syntax off
+"syntax enable
 colorscheme tender
 "colorscheme monokai
 "colorscheme dracula
@@ -70,9 +74,17 @@ set path+=**
 set wildmenu
 set hidden
 
-nnoremap <c-p> :GFiles<cr>
+nnoremap <c-p> :Buffers<cr>
 
+let g:fzf_preview_window = 'right:60%'
+
+"let g:svelte_preprocessor_tags = [
+  "\ { 'name': 'ts', 'tag': 'script', 'as': 'typescript' }
+  "\ ]
+"let g:svelte_preprocessors = ['ts']
 "let g:ale_fixers = { 'javascript': ['eslint'] }
 "let g:ale_fix_on_save = 1
 "
 set suffixesadd=.js,.vue,.scss,.svelte,.ts
+
+" set autochdir

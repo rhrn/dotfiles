@@ -17,6 +17,8 @@ export GIT_EDITOR=vim
 export PATH=${PATH}:~/bin
 export PATH=${PATH}:~/android-sdk/tools
 export PATH=${PATH}:~/android-sdk/platform-tools
+export NPM_CONFIG_PREFIX=~/.npm-global
+export N_PREFIX=$HOME/usr/local
 #export ANDROID_SDK=~/android-sdk 
 #export ANDROID_HOME=~/android-sdk 
 export JAVA_HOME=$(/usr/libexec/java_home)
@@ -109,4 +111,4 @@ fi
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/vault vault
 
-export PATH=~/.npm-global/bin:$PATH
+export PATH=~/.local/share/solana/install/active_release/bin:~/.npm-global/bin:$PATH

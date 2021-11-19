@@ -11,12 +11,9 @@ export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 ## #Added by the Heroku Toolbelt
 #export PATH="/usr/local/heroku/bin:$PATH"
 
-#export DOCKER_HOST=tcp://192.168.59.103:2376
-#export DOCKER_CERT_PATH=/Users/rhrn/.boot2docker/certs/boot2docker-vm
-#export DOCKER_TLS_VERIFY=1
-
-#export ANDROID_HOME=/usr/local/opt/android-sdk
-#export ANDROID_SDK_ROOT=/Users/rhrn/Library/Android/sdk
-#export NDK_PATH=/Users/rhrn/Library/Android/android-ndk-r10e
-#export GRADLE_HOME=/Users/rhrn/.gradle/wrapper/dists/gradle-5.6.4-all/ankdp27end7byghfw1q2sw75f/gradle-5.6.4/bin
-#export PATH=${PATH}:~/Library/Android/sdk/platform-tools:$GRADLE_HOME
+export ANDROID_HOME=/usr/local/opt/android-sdk
+export ANDROID_SDK_ROOT=/Users/rhrn/Library/Android/sdk
+export NDK_PATH=/Users/rhrn/Library/Android/android-ndk-r10e
+export GRADLE_HOME=/Users/rhrn/.gradle/wrapper/dists/gradle-5.6.4-all/ankdp27end7byghfw1q2sw75f/gradle-5.6.4/bin
+export PATH=${PATH}:~/Library/Android/sdk/platform-tools:$GRADLE_HOME
+. "$HOME/.cargo/env"
